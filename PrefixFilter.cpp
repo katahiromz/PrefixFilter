@@ -158,7 +158,7 @@ DialogProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 DWORD GetOptions(void)
 {
-    DWORD ret = ACO_FILTERPREFIXES;
+    DWORD ret = 0;
 
     WCHAR szPath[MAX_PATH];
     GetModuleFileNameW(NULL, szPath, _countof(szPath));
