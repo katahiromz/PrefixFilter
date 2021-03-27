@@ -22,6 +22,7 @@ public:
             while (fgets(buf, 256, fp))
             {
                 MultiByteToWideChar(CP_UTF8, 0, buf, _countof(buf), szText, _countof(szText));
+                StrTrimW(szText, L" \t\r\n");
                 m_data.push_back(szText);
             }
             fclose(fp);
