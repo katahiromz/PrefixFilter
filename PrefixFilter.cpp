@@ -180,6 +180,11 @@ DWORD GetOptions(void)
         ret |= ACO_FILTERPREFIXES;
     }
 
+    if (GetPrivateProfileIntW(L"Settings", L"NOPREFIXFILTERING", 0, szPath))
+    {
+        ret |= ACO_NOPREFIXFILTERING;
+    }
+
     return ret;
 }
 
